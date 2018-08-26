@@ -1,11 +1,16 @@
-package web.pageobjects;
+package web.pageobjects.popup;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.support.FindBy;
 
+/**
+ * CheckoutPopUp Pageobject class
+ * @author Aleem
+ */
 public class CheckoutPopUp extends PageObject {
 
+    //Page properties
     @FindBy(xpath = "//a[@title='Proceed to checkout']")
     WebElementFacade btnProceedToCheckout;
 
@@ -13,10 +18,12 @@ public class CheckoutPopUp extends PageObject {
     WebElementFacade btnContinueShopping;
 
 
+    //Continue shopping
     public void continueShopping() {
         btnContinueShopping.waitUntilClickable().click();
     }
 
+    //Checkout
     public void checkout() {
         btnProceedToCheckout.waitUntilClickable().click();
     }

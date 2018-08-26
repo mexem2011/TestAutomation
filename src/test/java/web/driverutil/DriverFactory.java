@@ -9,11 +9,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+/**
+ * Factory class for all the drivers
+ * @author Aleem
+ */
 public class DriverFactory implements DriverSource {
 
+    /**
+     * Overriding default driver
+     * @return Webdriver
+     */
     @Override
     public WebDriver newDriver() {
         WebDriver _driver = null;
+        //Retrieves browser name passed from command line
         String _browserName = System.getProperty("browser", DriverType.CHROME.toString()).toUpperCase();
         DriverType _driverType = DriverType.valueOf(_browserName);
         switch (_driverType) {

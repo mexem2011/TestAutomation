@@ -1,5 +1,9 @@
 package web.util;
 
+/**
+ * Pojo class to save items properties added to basket
+ * @author Aleem
+ */
 public class Product {
 
     private double price;

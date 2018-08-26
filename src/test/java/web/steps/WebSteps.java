@@ -3,9 +3,17 @@ package web.steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 import web.pageobjects.*;
+import web.pageobjects.popup.CheckoutPopUp;
+import web.pageobjects.popup.QuickViewPopUp;
 
+/**
+ * Serenity Steps class for better reports
+ *
+ * @author Aleem
+ */
 public class WebSteps extends ScenarioSteps {
 
+    //Pageobject classes
     HomePage homePage;
     QuickViewPopUp quickViewPopUp;
     SignInPage signInPage;
@@ -16,6 +24,8 @@ public class WebSteps extends ScenarioSteps {
     ShippingPage shippingPage;
     PaymentPage paymentPage;
     ConfirmOrderPage confirmOrderPage;
+
+    //Detailed step methods to log in HTML report
 
     @Step
     public void quickViewItem() {
