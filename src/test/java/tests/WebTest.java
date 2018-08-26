@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import web.steps.WebSteps;
 
 @RunWith(SerenityRunner.class)
-public class RunTest {
+public class WebTest {
 
     @Managed
     WebDriver driver;
@@ -20,9 +20,7 @@ public class RunTest {
     @Test
     public void testExample(){
         webSteps.openURL();
-        webSteps.signIn();
         webSteps.logIn();
-        webSteps.backToHome();
         webSteps.quickViewItem();
         webSteps.waitForQuickViewPopUp();
         webSteps.changeSize();

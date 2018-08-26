@@ -29,7 +29,9 @@ public class WebSteps extends ScenarioSteps {
 
     @Step
     public void logIn() {
+        homePage.signIn();
         signInPage.logIn();
+        myAccountPage.backToHome();
     }
 
     @Step
