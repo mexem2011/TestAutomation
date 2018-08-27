@@ -25,7 +25,7 @@ public class WebTest {
      * Junit test to purchase two items
      */
     @Test
-    public void endToEndTest(){
+    public void webEndToEndTest(){
         //Load the URL
         webSteps.openURL();
         //Login to web applicatoin
